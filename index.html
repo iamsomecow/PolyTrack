@@ -35,4 +35,20 @@
 
 ]]&gt;</content>
 </moduleprefs></module>
+<script>
+	document.addEventListener('keydown', function(event) {
+      if (event.key === 'f' || event.key === 'F') {
+		f();
+	  }})
+	function f() {
+	  if (content.requestFullscreen) {
+        content.requestFullscreen(); // Standard method
+      } else if (content.webkitRequestFullscreen) {
+        content.webkitRequestFullscreen(); // For Safari
+      } else if (content.msRequestFullscreen) {
+        content.msRequestFullscreen(); // For older IE/Edge
+      }
+	}
+	f();
+</script>
 </body></html>
